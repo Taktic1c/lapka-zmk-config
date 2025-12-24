@@ -39,12 +39,21 @@
             >;
         };
 
-        gfn_layer {
+        Symbols {
             bindings = <
-&kp N5  &kp N1  &kp N2   &kp N3   &kp N4  &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL
-&kp N0  &kp N6  &kp N7   &kp N8   &kp N9  &none         &none         &none         &none         &none
-&kp G   &kp J   &kp I    &kp M    &kp T   &kp KP_NUM    &none         &none         &sys_reset    &bootloader
-                &kp ESC  &kp RET  &trans  &trans        &trans        &none
+&kp N1        &kp N2         &kp N3        &kp N4         &kp N5     &kp N6     &kp N7     &kp N8        &kp N9        &kp N0
+&kp SEMI      &kp RA(GRAVE)  &kp GRAVE     &kp LS(GRAVE)  &kp MINUS  &kp PLUS   &sk RSHFT  &sk RCTRL     &sk LALT      &sk RGUI
+&kp RA(BSLH)  &none          &kp LS(LBKT)  &kp LBKT       &kp UNDER  &kp EQUAL  &kp RBKT   &kp LS(RBKT)  &kp LS(BSLH)  &kp BSLH
+                             &trans        &kp ENTER      &mo 3      &trans     &none      &none
+            >;
+        };
+
+        Functional {
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL
+&kp F6  &kp F7  &kp F8  &kp F9   &kp F10  &none         &none         &none         &none         &none
+&none   &none   &none   &kp F11  &kp F12  &kp KP_NUM    &none         &none         &sys_reset    &bootloader
+                &none   &none    &trans   &trans        &none         &none
             >;
         };
 
@@ -52,17 +61,8 @@
             bindings = <
 &sk LC(TAB)       &sk LA(TAB)        &sk LG(TAB)  &none      &kp ESC  &kp ESC  &kp HOME   &kp END    &kp BSPC  &kp DEL
 &sk LGUI          &sk LALT           &sk LCTRL    &sk LSHFT  &kp RET  &kp RET  &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT
-&kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &tog GAM     &kp PSCRN  &kp TAB  &kp TAB  &kp PG_UP  &kp PG_DN  &kp APOS  &kp KP_NUM
+&kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &tog 1       &kp PSCRN  &kp TAB  &kp TAB  &kp PG_UP  &kp PG_DN  &kp APOS  &kp KP_NUM
                                      &trans       &trans     &trans   &trans   &trans     &trans
-            >;
-        };
-
-        sym_layer {
-            bindings = <
-&kp N1        &kp N2         &kp N3        &kp N4         &kp N5     &kp N6     &kp N7     &kp N8        &kp N9        &kp N0
-&kp SEMI      &kp RA(GRAVE)  &kp GRAVE     &kp LS(GRAVE)  &kp MINUS  &kp PLUS   &sk RSHFT  &sk RCTRL     &sk LALT      &sk RGUI
-&kp RA(BSLH)  &none          &kp LS(LBKT)  &kp LBKT       &kp UNDER  &kp EQUAL  &kp RBKT   &kp LS(RBKT)  &kp LS(BSLH)  &kp BSLH
-                             &trans        &trans         &trans     &trans     &trans     &kp RALT
             >;
         };
 
