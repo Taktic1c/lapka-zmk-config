@@ -18,6 +18,50 @@
 };
 
 / {
+    macros {
+        left_bracket: left_bracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_SHIFT) &kp LEFT_BRACKET &kp LA(LEFT_SHIFT)>;
+            label = "LEFT_BRACKET";
+        };
+
+        right_bracket: right_bracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_SHIFT) &kp RIGHT_BRACKET &kp LA(LEFT_SHIFT)>;
+            label = "RIGHT_BRACKET";
+        };
+
+        left_brace: left_brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_SHIFT) &kp LEFT_BRACE &kp LA(LEFT_SHIFT)>;
+            label = "LEFT_BRACE";
+        };
+
+        right_brace: right_brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_SHIFT) &kp RIGHT_BRACE &kp LA(LEFT_SHIFT)>;
+            label = "RIGHT_BRACE";
+        };
+
+        less_than: less_than {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_SHIFT) &kp LESS_THAN &kp LA(LEFT_SHIFT)>;
+            label = "LESS_THAN";
+        };
+
+        greater_than: greater_than {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_SHIFT) &kp GREATER_THAN &kp LA(LEFT_SHIFT)>;
+            label = "GREATER_THAN";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -41,10 +85,10 @@
 
         Symbols {
             bindings = <
-&kp N1        &kp N2         &kp N3        &kp N4         &kp N5     &kp N6     &kp N7     &kp N8        &kp N9        &kp N0
-&kp SEMI      &kp RA(GRAVE)  &kp GRAVE     &kp LS(GRAVE)  &kp MINUS  &kp PLUS   &sk RSHFT  &sk RCTRL     &sk LALT      &sk RGUI
-&kp RA(BSLH)  &none          &kp LS(LBKT)  &kp LBKT       &kp UNDER  &kp EQUAL  &kp RBKT   &kp LS(RBKT)  &kp LS(BSLH)  &kp BSLH
-                             &trans        &mo 3          &kp ENTER  &none      &trans     &none
+&kp N1  &kp N2  &kp N3      &kp N4     &kp N5          &kp N6          &kp N7     &kp N8         &kp N9  &kp N0
+&none   &none   &kp SLASH   &kp MINUS  &left_bracket   &right_bracket  &kp EQUAL  &kp BACKSLASH  &none   &none
+&none   &none   &less_than  &kp UNDER  &left_brace     &right_brace    &kp PLUS   &greater_than  &none   &none
+                &trans      &mo 3      &kp LEFT_SHIFT  &none           &trans     &none
             >;
         };
 
