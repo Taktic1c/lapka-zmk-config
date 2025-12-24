@@ -91,7 +91,7 @@
         Navigate {
             bindings = <
 &kp ESCAPE      &kp TAB       &kp PAGE_UP       &kp PAGE_DOWN   &kp TILDE   &none            &none     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSPACE
-&kp LEFT_WIN    &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp ENTER   &kp PRINTSCREEN  &kp LEFT  &kp UP_ARROW      &kp RIGHT          &kp DOUBLE_QUOTES
+&kp LEFT_WIN    &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp ENTER   &kp PRINTSCREEN  &kp LEFT  &kp UP_ARROW      &kp RIGHT          &kp SINGLE_QUOTE
 &studio_unlock  &none         &mkp RCLK         &mkp LCLK       &kp DELETE  &none            &kp HOME  &kp DOWN          &kp END            &kp DELETE
                               &none             &trans          &none       &kp ENTER        &mo 3     &trans
             >;
